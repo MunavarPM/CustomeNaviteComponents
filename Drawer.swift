@@ -13,12 +13,10 @@ struct FamilyDrawer: View {
     @State private var useDirectionalAnimation = false
     @State private var animationDuration: Double = 0.25
     
-
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
                 ZStack {
-                    
                     Button("Show Modal") {
                         withAnimation(.spring(response: 0.4, dampingFraction: 0.75)) {
                             showModal = true
@@ -30,10 +28,8 @@ struct FamilyDrawer: View {
                     .foregroundColor(.white)
                     .cornerRadius(999)
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    
                 }
                 
-
                 Toggle(isOn: $useDirectionalAnimation) {
                     Text("Use Directional Animation")
                         .font(.system(size: 14, weight: .medium))
